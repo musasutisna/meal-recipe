@@ -13,7 +13,7 @@ const main = () => {
   }
 
   domMenuMain.onAbout = () => {
-
+    domModalAbout.toggle()
   }
 }
 

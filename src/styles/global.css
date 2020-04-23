@@ -2,6 +2,8 @@
   margin: 0;
   paddiing: 0;
   box-sizing: border-box;
+  font-family: roboto, Arial, sans-serif;
+  font-weight: lighter;
 }
 
 #Wrapper {
@@ -10,6 +12,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 999;
   display: grid;
   width: 100%;
   height: 100%;
@@ -64,3 +67,63 @@ menu-main .About {
   background-size: 100% 100%;
   border: 0;
 }
+
+modal-about {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+modal-about .ModalContainer {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  background: #F0F0F0;
+  text-align: center;
+}
+modal-about .ModalContainer * {
+  margin-bottom: 10px;
+}
+modal-about .ModalContainer h1 {
+  font-size: 26px;
+  color: #333333;
+}
+modal-about .ModalContainer h3 {
+  font-size: 19px;
+  color: #666666;
+}
+modal-about .ModalContainer h6 {
+  font-size: 16px;
+  color: #999999;
+}
+modal-about .ModalContainer h6 a {
+  color: #999999;
+}
+modal-about .ModalOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  background: #999999;
+  opacity: 0.5
+}
+
