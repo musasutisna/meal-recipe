@@ -230,7 +230,7 @@ detail-meal .Container {
 detail-meal .MealImage {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 256px;
   height: auto;
   text-align: center;
 }
@@ -251,7 +251,7 @@ detail-meal .MealIngredients {
   display: block;
   width: 100%;
   height: auto;
-  padding: 16px;
+  padding: 16px 15%;
   overflow: hidden;
 }
 detail-meal .MealIngredients h3 {
@@ -268,7 +268,7 @@ item-ingredient {
   height: auto;
 }
 item-ingredient img {
-  width: 15%;
+  width: 128px;
   height: auto;
   padding: 2.5%;
   background: #F0F0F0;
@@ -286,5 +286,16 @@ item-ingredient p {
 @media screen and (max-width: 600px) {
   item-meal {
     width: 50%;
+  }
+
+  detail-meal .MealImage {
+    width: 50%;
+  }
+  detail-meal .MealIngredients {
+    padding: 16px 5%;
+  }
+
+  item-ingredient img {
+    width: 15%;
   }
 }
