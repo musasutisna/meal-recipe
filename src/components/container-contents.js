@@ -1,10 +1,14 @@
 class ContainerContent extends HTMLElement {
-  connectedCallback() {
-    this.render()
-  }
-
-  render() {
+  /**
+   * Set new content.
+   *
+   * @param   DOM
+   * @return  void
+   */
+  set newContent(domContent) {
     this.innerHTML = ''
+
+    this.appendChild(domContent)
   }
 }
 

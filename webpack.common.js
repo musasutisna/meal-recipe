@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -8,7 +9,8 @@ module.exports = {
   resolve: {
     alias: {
       styles: path.resolve(__dirname, 'src/styles'),
-      components: path.resolve(__dirname, 'src/components')
+      components: path.resolve(__dirname, 'src/components'),
+      data: path.resolve(__dirname, 'src/data')
     }
   },
   module: {
@@ -28,6 +30,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      BASEURL_API: JSON.stringify('https://www.themealdb.com/api/json/v1/1')
+    }),
     new CopyWebpackPlugin([
       {
         from: 'src/static',
