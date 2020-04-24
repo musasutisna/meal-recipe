@@ -25,7 +25,7 @@ class ItemMeal extends HTMLElement {
     this.innerHTML = `<div class="MealImage">
                         <img src="${this._meal.strMealThumb}">
                       </div>
-                      <p class="MealName">${this._meal.strMeal} ${'qwerty '.repeat(this._meal.strMeal.length)}</p>`
+                      <p class="MealName">${this._meal.strMeal}</p>`
   
     this.addEventListener('click', () => {
       this._onClick(this._meal)
